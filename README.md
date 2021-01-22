@@ -15,5 +15,5 @@ npm install
 
 Run dev server:
 ```
-npm run watch
+npm run dev
 ```
