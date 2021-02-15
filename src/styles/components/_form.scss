@@ -1,0 +1,86 @@
+.form-container {
+  margin: 1rem auto;
+  max-width: 600px;
+  .form {
+    display: flex;
+    flex-direction: column;
+    font-family: Ubuntu;
+  
+    label {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      font-weight: 500;
+      font-size: 1.5rem;
+      justify-content: space-between;
+      border-radius: 5px;
+      background-color: #FCA5A5;
+      box-shadow: 0px 0px 15px 1px rgba(179, 179, 179, 0.25);
+      margin: 0.5rem 0;
+      padding: 1rem;
+      
+      input,
+      textarea {
+        transition: 0.2s ease-out;
+        border: none;
+        width: 100%;
+        border-radius: 5px;
+        padding: 1rem;
+      }
+
+      input {
+        min-height: 35px;
+        font-weight: 100;
+        font-size: 1.5rem;
+      }
+
+      textarea {
+        resize: none;
+        font-weight: 100;
+        min-height: 230px;
+        font-size: 1.5rem;
+
+        
+      }
+  
+      input:focus,
+      textarea:focus {
+        outline: #38a199;
+      }
+    }
+  
+    @media screen and (max-width: 575px) {
+      label {
+        flex-wrap: wrap;
+      }
+      input,
+      textarea {
+        width: 100%;
+      }
+    }
+    div {
+      align-self: flex-end;
+      transition: 0.15s ease-out;
+  
+      button {
+        border: none;
+        border-radius: 5px;
+        padding: 2rem 3rem;
+        font-size: 1.75rem;;
+        cursor: pointer;
+        background-color: #7F1D1D;
+        color: #f7fafc;
+        transition: 0.15s ease-out;
+      }
+  
+      button:hover {
+        background-color: lighten($color: #7F1D1D, $amount: 10%);
+      }
+    }
+  
+    div:hover {
+      border-left: 4px solid lighten($color: #7F1D1D, $amount: 10%);
+      padding-left: 0.125rem;
+    }
+  }
+}

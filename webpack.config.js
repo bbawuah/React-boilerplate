@@ -29,6 +29,18 @@ module.exports = {
         test: /\.s?css$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
+      {
+        test: /\.font\.js/,
+        use: [
+          {
+            loader: 'css-loader',
+            options: {
+              url: false
+            }
+          },
+          'webfonts-loader'
+        ]
+      }
     ],
   },
   devServer: {
